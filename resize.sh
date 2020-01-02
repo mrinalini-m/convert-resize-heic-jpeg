@@ -4,9 +4,9 @@ images=()
 rm -rf renamed jpegs_100 resized
 for f in *; do images+=("${f}"); done
 mkdir renamed jpegs_100 resized 
-for f in *; do if [[ "${images[@]}" =~ "${f}" ]]; then cp ${f} ./renamed; fi; done
+for f in *; do if [[ "${images[@]}" =~ "${f}" ]]; then cp "${f}" ./renamed; fi; done
 for f in ./renamed/*; do mv "$f" "$f.tmp"; mv "$f.tmp" "`echo $f | tr "[:upper:]" "[:lower:]"`"; done                  
-echo Successfully formated image names...
+echo Successfully formatted image names...
 
 for f in ./renamed/*.jpeg; do mv "${f}" ./jpegs_100; done
 for f in ./renamed/*; do mogrify -path "./jpegs_100" -format jpeg "${f}"; done  
