@@ -1,0 +1,17 @@
+{
+	"name": "convert-resize-heic-jpeg",
+	"version": "1.0.0",
+	"description": "Convert/resize heics to jpegs",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"images",
+		"resize",
+		"convert",
+		"heic",
+		"jpeg"
+	],
+	"author": "Mrinalini Manandhar",
+	"license": "MIT"
+}
